@@ -1,0 +1,13 @@
+{
+  "name": "ilumin-notes",
+  "version": "1.0.0",
+  "description": "ilumin zettels",
+  "main": "index.js",
+  "repository": "https://github.com/ilumin/notes.git",
+  "author": "O Teerasak Vichadee <iolumin@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "neuron gen -wS"
+  }
+}
