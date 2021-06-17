@@ -1,6 +1,6 @@
-# Lumin's Zettels (Notes)
+# Lumin's Random Access Memory
 
-Lumin use to store his throught and practicvs Zettelkasten.
+Lumin use to store his throught and practicing Zettelkasten.
 
 Build from [neuron]
 

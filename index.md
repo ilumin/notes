@@ -3,7 +3,7 @@ dirtree:
   display: false
 ---
 
-# Random Notes from Lumin
+# Lumin's Random Access Memory
 
 Hi, I am [[about|Teerasak Vichadee]]#
 
