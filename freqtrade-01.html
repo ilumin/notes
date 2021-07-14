@@ -1,0 +1,261 @@
+<!DOCTYPE html><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type" /><meta content="width=device-width, initial-scale=1" name="viewport" /><!--replace-start-0--><!--replace-start-5--><!--replace-start-8--><title>Freqtrade/EMAPriceCrossoverWithThreshold - Lumin&#39;s Zettels</title><!--replace-end-8--><!--replace-end-5--><!--replace-end-0--><link href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.7/dist/semantic.min.css" rel="stylesheet" /><link href="https://fonts.googleapis.com/css?family=Merriweather|Libre+Franklin|Roboto+Mono&amp;display=swap" rel="stylesheet" /><!--replace-start-1--><!--replace-start-4--><!--replace-start-7--><link href="https://raw.githubusercontent.com/srid/neuron/master/assets/neuron.svg" rel="icon" /><meta content="Lumin" name="author" /><meta content="" name="description" /><link href="https://ilumin.github.io/notes/freqtrade-01" rel="canonical" /><meta content="Freqtrade/EMAPriceCrossoverWithThreshold" property="og:title" /><meta content="Lumin&#39;s Zettels" property="og:site_name" /><meta content="article" property="og:type" /><meta content="freqtrade-01" property="neuron:zettel-id" /><meta content="freqtrade-01" property="neuron:zettel-slug" /><meta content="bot/trading-bot" property="neuron:zettel-tag" /><meta content="root/notes" property="neuron:zettel-tag" /><script type="application/ld+json">[{"@context":"https://schema.org","itemListElement":[{"name":"notes/","item":"https://ilumin.github.io/notes/notes","@type":"ListItem","position":1}],"@type":"BreadcrumbList"}]</script><style type="text/css">body{background-color:#eeeeee !important;font-family:"Libre Franklin", serif !important}body .ui.container{font-family:"Libre Franklin", serif !important}body h1, h2, h3, h4, h5, h6, .ui.header, .headerFont{font-family:"Merriweather", sans-serif !important}body code, pre, tt, .monoFont{font-family:"Roboto Mono","SFMono-Regular","Menlo","Monaco","Consolas","Liberation Mono","Courier New", monospace !important}body div.z-index p.info{color:#808080}body div.z-index ul{list-style-type:square;padding-left:1.5em}body div.z-index .uplinks{margin-left:0.29999em}body .zettel-content h1#title-h1{background-color:rgba(27,28,29,0.1)}body nav.bottomPane{background-color:rgba(27,28,29,2.0e-2)}body div#footnotes{border-top-color:#1b1c1d}body p{line-height:150%}body img{max-width:100%}body .deemphasized{font-size:0.94999em}body .deemphasized:hover{opacity:1}body .deemphasized:not(:hover){opacity:0.69999}body .deemphasized:not(:hover) a{color:#808080 !important}body div.container.universe{padding-top:1em}body div.zettel-view ul{padding-left:1.5em;list-style-type:square}body div.zettel-view .pandoc .highlight{background-color:#ffff00}body div.zettel-view .pandoc .ui.disabled.fitted.checkbox{margin-right:0.29999em;vertical-align:middle}body div.zettel-view .zettel-content .metadata{margin-top:1em}body div.zettel-view .zettel-content .metadata div.date{text-align:center;color:#808080}body div.zettel-view .zettel-content h1{padding-top:0.2em;padding-bottom:0.2em;text-align:center}body div.zettel-view .zettel-content h2{border-bottom:solid 1px #4682b4;margin-bottom:0.5em}body div.zettel-view .zettel-content h3{margin:0px 0px 0.4em 0px}body div.zettel-view .zettel-content h4{opacity:0.8}body div.zettel-view .zettel-content div#footnotes{margin-top:4em;border-top-style:groove;border-top-width:2px;font-size:0.9em}body div.zettel-view .zettel-content div#footnotes ol > li > p:only-of-type{display:inline;margin-right:0.5em}body div.zettel-view .zettel-content aside.footnote-inline{width:30%;padding-left:15px;margin-left:15px;float:right;background-color:#d3d3d3}body div.zettel-view .zettel-content .overflows{overflow:auto}body div.zettel-view .zettel-content code{margin:auto auto auto auto;font-size:100%}body div.zettel-view .zettel-content p code, li code, ol code{padding:0.2em 0.2em 0.2em 0.2em;background-color:#f5f2f0}body div.zettel-view .zettel-content pre{overflow:auto}body div.zettel-view .zettel-content dl dt{font-weight:bold}body div.zettel-view .zettel-content blockquote{background-color:#f9f9f9;border-left:solid 10px #cccccc;margin:1.5em 0px 1.5em 0px;padding:0.5em 10px 0.5em 10px}body div.zettel-view .zettel-content.raw{background-color:#dddddd}body .ui.label.zettel-tag{color:#000000}body .ui.label.zettel-tag a{color:#000000}body nav.bottomPane ul.backlinks > li{padding-bottom:0.4em;list-style-type:disc}body nav.bottomPane ul.context-list > li{list-style-type:lower-roman}body .footer-version img{-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:grayscale(100%)}body .footer-version img:hover{-webkit-filter:grayscale(0%);-moz-filter:grayscale(0%);-ms-filter:grayscale(0%);-o-filter:grayscale(0%);filter:grayscale(0%)}body .footer-version, .footer-version a, .footer-version a:visited{color:#808080}body .footer-version a{font-weight:bold}body .footer-version{margin-top:1em !important;font-size:0.69999em}@media only screen and (max-width: 768px){body div#zettel-container{margin-left:0.4em !important;margin-right:0.4em !important}}body span.zettel-link-container span.zettel-link a{color:#1b1c1d;font-weight:bold;text-decoration:none}body span.zettel-link-container span.zettel-link a:hover{background-color:rgba(27,28,29,0.1)}body span.zettel-link-container span.extra{color:auto}body span.zettel-link-container.errors{border:solid 1px #ff0000}body span.zettel-link-container.errors span.zettel-link a:hover{text-decoration:none !important;cursor:not-allowed}body [data-tooltip]:after{font-size:0.69999em}body div.tag-tree div.node{font-weight:bold}body div.tag-tree div.node a.inactive{color:#555555}body .tree.flipped{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}body .tree{overflow:auto}body .tree ul.root{padding-top:0px;margin-top:0px}body .tree ul{position:relative;padding:1em 0px 0px 0px;white-space:nowrap;margin:0px auto 0px auto;text-align:center}body .tree ul::after{content:"";display:table;clear:both}body .tree ul:last-child{padding-bottom:0.1em}body .tree li{display:inline-block;vertical-align:top;text-align:center;list-style-type:none;position:relative;padding:1em 0.5em 0em 0.5em}body .tree li::before{content:"";position:absolute;top:0px;right:50%;border-top:solid 2px #cccccc;width:50%;height:1.19999em}body .tree li::after{content:"";position:absolute;top:0px;right:50%;border-top:solid 2px #cccccc;width:50%;height:1.19999em}body .tree li::after{right:auto;left:50%;border-left:solid 2px #cccccc}body .tree li:only-child{padding-top:0em}body .tree li:only-child::after{display:none}body .tree li:only-child::before{display:none}body .tree li:first-child::before{border-style:none;border-width:0px}body .tree li:first-child::after{border-radius:5px 0px 0px 0px}body .tree li:last-child::after{border-style:none;border-width:0px}body .tree li:last-child::before{border-right:solid 2px #cccccc;border-radius:0px 5px 0px 0px}body .tree ul ul::before{content:"";position:absolute;top:0px;left:50%;border-left:solid 2px #cccccc;width:0px;height:1.19999em}body .tree li div.forest-link{border:solid 2px #cccccc;padding:0.2em 0.29999em 0.2em 0.29999em;text-decoration:none;display:inline-block;border-radius:5px 5px 5px 5px;color:#333333;position:relative;top:2px}body .tree.flipped li div.forest-link{-webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-ms-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg)}</style><script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/autoloader/prism-autoloader.min.js"></script><!--replace-end-7--><!--replace-end-4--><!--replace-end-1--></head><body><div class="ui fluid container universe"><!--replace-start-2--><!--replace-start-3--><!--replace-start-6--><nav class="flipped tree deemphasized" id="zettel-uptree" style="transform-origin: 50%"><ul class="root"><li><ul><li><div class="forest-link"><span class="zettel-link-container"><span class="zettel-link"><a href="notes">notes/</a></span></span></div></li></ul></li></ul></nav><div class="ui text container" id="zettel-container" style="position: relative"><div class="zettel-view"><article class="ui raised attached segment zettel-content"><div class="pandoc"><h1 id="title-h1">Freqtrade/EMAPriceCrossoverWithThreshold</h1><h2 id="note">Note</h2><ul><li>after adjust a list of coin -&gt; some coin are worst, I need to pick the good one</li><li>2-3 coin might not make much profit</li></ul><h2 id="backtest">Backtest</h2><ul><li>whitelist: all BUSD quote</li><li>start wallet: 1,000 BUSD</li><li>profit: 64.99%</li></ul><pre><code class="sh language-sh">=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2020-06-09 00:00:00 |
+| Backtesting to         | 2021-07-14 05:00:00 |
+| Max open trades        | 3                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1205 / 3.01         |
+| Starting balance       | 1000.000 BUSD       |
+| Final balance          | 1649.942 BUSD       |
+| Absolute profit        | 649.942 BUSD        |
+| Total profit %         | 64.99%              |
+| Avg. stake amount      | 679.510 BUSD        |
+| Total trade volume     | 818809.389 BUSD     |
+================================================</code></pre><h2 id="win-list">Win list</h2><ul><li>ADA/BUSD</li><li>AERGO/BUSD</li><li>ALICE/BUSD</li><li>ALPHA/BUSD</li><li>ATOM/BUSD</li><li>AUDIO/BUSD</li><li>AVAX/BUSD</li><li>BADGER/BUSD</li><li>BCH/BUSD</li><li>BCHA/BUSD</li><li>BEL/BUSD</li><li>BNB/BUSD</li><li>BTC/BUSD</li><li>BTCST/BUSD</li><li>BTG/BUSD</li><li>BTT/BUSD</li><li>BZRX/BUSD</li><li>COMP/BUSD</li><li>COVER/BUSD</li><li>CREAM/BUSD</li><li>CRV/BUSD</li><li>CTSI/BUSD</li><li>DOGE/BUSD</li><li>ETH/BUSD</li><li>FIL/BUSD</li><li>FIO/BUSD</li><li>FOR/BUSD</li><li>FORTH/BUSD</li><li>HEGIC/BUSD</li><li>LINK/BUSD</li><li>LTC/BUSD</li><li>LUNA/BUSD</li><li>MANA/BUSD</li><li>MATIC/BUSD</li><li>MKR/BUSD</li><li>NEAR/BUSD</li><li>OCEAN/BUSD</li><li>OM/BUSD</li><li>OMG/BUSD</li><li>ONE/BUSD</li><li>PERP/BUSD</li><li>PSG/BUSD</li><li>RSR/BUSD</li><li>SOL/BUSD</li><li>STRAX/BUSD</li><li>SXP/BUSD</li><li>WRX/BUSD</li><li>XMR/BUSD</li><li>XRP/BUSD</li><li>YFI/BUSD</li><li>YFII/BUSD</li><li>ZEC/BUSD</li><li>ZIL/BUSD</li><li>ZRX/BUSD</li></ul><h2 id="loss-list">Loss list</h2><ul><li>ALGO/BUSD</li><li>DGB/BUSD</li><li>DF/BUSD</li><li>KSM/BUSD</li><li>JUV/BUSD</li><li>ETC/BUSD</li><li>AVA/BUSD</li><li>RUNE/BUSD</li><li>AXS/BUSD</li><li>SYS/BUSD</li><li>IQ/BUSD</li><li>CVP/BUSD</li><li>WAVES/BUSD</li><li>QTUM/BUSD</li><li>1INCH/BUSD</li><li>EUR/BUSD</li><li>ENJ/BUSD</li><li>BAL/BUSD</li><li>EOS/BUSD</li><li>HARD/BUSD</li><li>DIA/BUSD</li><li>FLM/BUSD</li><li>GBP/BUSD</li><li>AUD/BUSD</li><li>AUTO/BUSD</li><li>KNC/BUSD</li><li>BAT/BUSD</li><li>SWRV/BUSD</li><li>NMR/BUSD</li><li>ICX/BUSD</li><li>CAKE/BUSD</li><li>DODO/BUSD</li><li>AAVE/BUSD</li><li>RVN/BUSD</li><li>DOT/BUSD</li><li>DATA/BUSD</li><li>WING/BUSD</li><li>VIDT/BUSD</li><li>UNFI/BUSD</li><li>NEO/BUSD</li><li>INJ/BUSD</li><li>LRC/BUSD</li><li>KP3R/BUSD</li><li>BNT/BUSD</li><li>ROSE/BUSD</li><li>ANT/BUSD</li><li>XVS/BUSD</li><li>SNX/BUSD</li><li>VET/BUSD</li><li>EGLD/BUSD</li><li>DASH/BUSD</li><li>UNI/BUSD</li><li>BAR/BUSD</li><li>TRX/BUSD</li><li>XLM/BUSD</li><li>TOMO/BUSD</li><li>FTT/BUSD</li></ul><h2 id="trade-a-lot-but-not-win">Trade a lot but not win</h2><ul><li>AUD/BUSD</li><li>GBP/BUSD</li><li>EUR/BUSD</li><li>TOMO/BUSD</li></ul><h2 id="never-win-list">Never win list</h2><ul><li>ATM/BUSD</li><li>AUCTION/BUSD</li><li>BOND/BUSD</li><li>BURGER/BUSD</li><li>CHR/BUSD</li><li>COTI/BUSD</li><li>DEGO/BUSD</li><li>DNT/BUSD</li><li>DOCK/BUSD</li><li>EPS/BUSD</li><li>ERN/BUSD</li><li>FTM/BUSD</li><li>GTC/BUSD</li><li>HOT/BUSD</li><li>ICP/BUSD</li><li>KAVA/BUSD</li><li>KEEP/BUSD</li><li>KLAY/BUSD</li><li>MASK/BUSD</li><li>MLN/BUSD</li><li>NU/BUSD</li><li>POLS/BUSD</li><li>POND/BUSD</li><li>RLC/BUSD</li><li>SC/BUSD</li><li>SFP/BUSD</li><li>STMX/BUSD</li><li>SUPER/BUSD</li><li>THETA/BUSD</li><li>TKO/BUSD</li><li>TLM/BUSD</li><li>TORN/BUSD</li><li>TVK/BUSD</li><li>TWT/BUSD</li><li>UTK/BUSD</li><li>WIN/BUSD</li><li>ZEN/BUSD</li><li>SHIB/BUSD</li><li>USDC/BUSD</li><li>FXS/BUSD</li><li>XVG/BUSD</li><li>IOTX/BUSD</li><li>XEM/BUSD</li><li>CFX/BUSD</li><li>ATA/BUSD</li><li>TUSD/BUSD</li><li>PAX/BUSD</li><li>MDX/BUSD</li><li>CELR/BUSD</li><li>XTZ/BUSD</li><li>JST/BUSD</li><li>SAND/BUSD</li><li>LINA/BUSD</li><li>HNT/BUSD</li><li>DEXE/BUSD</li><li>IOST/BUSD</li><li>FIS/BUSD</li><li>RAMP/BUSD</li><li>SRM/BUSD</li><li>SKL/BUSD</li><li>LIT/BUSD</li><li>PHA/BUSD</li><li>IOTA/BUSD</li><li>LPT/BUSD</li><li>BIFI/BUSD</li><li>GRT/BUSD</li><li>PROM/BUSD</li><li>CHZ/BUSD</li><li>CKB/BUSD</li><li>SUSHI/BUSD</li><li>TRB/BUSD</li><li>ACM/BUSD</li><li>REEF/BUSD</li><li>GHST/BUSD</li><li>NANO/BUSD</li><li>MIR/BUSD</li><li>UFT/BUSD</li><li>TRU/BUSD</li><li>HBAR/BUSD</li><li>BAND/BUSD</li><li>FRONT/BUSD</li><li>IDEX/BUSD</li><li>CTK/BUSD</li><li>ONT/BUSD</li><li>SLP/BUSD</li><li>AR/BUSD</li><li>BAKE/BUSD</li></ul><h2 id="full-report">Full Report</h2><pre><code class="sh language-sh">============================================================= BACKTESTING REPORT ============================================================
+|         Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit BUSD |   Tot Profit % |     Avg Duration |   Win  Draw  Loss  Win% |
+|--------------+--------+----------------+----------------+-------------------+----------------+------------------+-------------------------|
+|   MATIC/BUSD |     15 |           8.30 |         124.56 |          1558.977 |         155.90 |         23:40:00 |     5     0    10  33.3 |
+|   AUDIO/BUSD |     11 |          14.21 |         156.33 |          1158.037 |         115.80 |  1 day, 10:16:00 |     4     0     7  36.4 |
+|     BTG/BUSD |      1 |          38.54 |          38.54 |           623.976 |          62.40 |  3 days, 2:00:00 |     1     0     0   100 |
+|     SXP/BUSD |      8 |          17.33 |         138.66 |           478.116 |          47.81 |   1 day, 9:52:00 |     3     0     5  37.5 |
+|    BCHA/BUSD |     14 |           3.76 |          52.61 |           472.395 |          47.24 |   1 day, 3:04:00 |     6     0     8  42.9 |
+|     OMG/BUSD |      1 |          25.92 |          25.92 |           430.782 |          43.08 | 2 days, 20:00:00 |     1     0     0   100 |
+|   COVER/BUSD |      3 |          18.64 |          55.91 |           427.967 |          42.80 |  1 day, 17:40:00 |     2     0     1  66.7 |
+|    LINK/BUSD |     17 |           3.86 |          65.65 |           424.956 |          42.50 |   1 day, 2:53:00 |     5     0    12  29.4 |
+|   HEGIC/BUSD |      5 |          18.39 |          91.96 |           414.951 |          41.50 |   1 day, 9:00:00 |     1     0     4  20.0 |
+|     BNB/BUSD |     17 |           3.62 |          61.47 |           408.945 |          40.89 |   1 day, 7:32:00 |     7     0    10  41.2 |
+|     YFI/BUSD |      3 |          -0.06 |          -0.19 |           387.830 |          38.78 |         18:20:00 |     1     0     2  33.3 |
+|     SOL/BUSD |     20 |           1.80 |          36.00 |           360.366 |          36.04 |   1 day, 0:00:00 |     7     0    13  35.0 |
+|   ALICE/BUSD |      4 |           6.87 |          27.47 |           318.657 |          31.87 |         19:30:00 |     2     0     2  50.0 |
+|    NEAR/BUSD |      4 |           7.73 |          30.91 |           317.645 |          31.76 |   1 day, 6:45:00 |     3     0     1  75.0 |
+|     PSG/BUSD |      7 |           2.63 |          18.43 |           279.310 |          27.93 |   1 day, 1:34:00 |     3     0     4  42.9 |
+|    PERP/BUSD |      2 |           8.03 |          16.07 |           267.209 |          26.72 |   1 day, 4:30:00 |     2     0     0   100 |
+|   CREAM/BUSD |     12 |           1.40 |          16.85 |           219.645 |          21.96 |         22:30:00 |     3     0     9  25.0 |
+|     ZIL/BUSD |     12 |           2.60 |          31.26 |           218.469 |          21.85 |         23:35:00 |     6     0     6  50.0 |
+|    ATOM/BUSD |     19 |           2.09 |          39.79 |           195.212 |          19.52 |         23:25:00 |     8     0    11  42.1 |
+|   BTCST/BUSD |      4 |           8.16 |          32.63 |           193.623 |          19.36 |   1 day, 2:00:00 |     2     0     2  50.0 |
+|     WRX/BUSD |      7 |           2.68 |          18.78 |           178.217 |          17.82 |   1 day, 6:00:00 |     3     0     4  42.9 |
+|     BEL/BUSD |      9 |           2.22 |          20.02 |           168.046 |          16.80 |   1 day, 5:00:00 |     3     0     6  33.3 |
+|    COMP/BUSD |     11 |           2.68 |          29.46 |           150.866 |          15.09 |   1 day, 0:00:00 |     5     0     6  45.5 |
+|     ZEC/BUSD |      7 |           1.74 |          12.17 |           136.609 |          13.66 |   1 day, 1:34:00 |     2     0     5  28.6 |
+|    AVAX/BUSD |     10 |           3.06 |          30.61 |           135.023 |          13.50 |         23:54:00 |     3     0     7  30.0 |
+|    DOGE/BUSD |      8 |           0.43 |           3.47 |           134.394 |          13.44 |         17:45:00 |     2     0     6  25.0 |
+|     ETH/BUSD |      6 |           5.58 |          33.48 |           119.200 |          11.92 |  1 day, 23:40:00 |     2     0     4  33.3 |
+|    MANA/BUSD |      3 |           9.42 |          28.27 |           114.141 |          11.41 |  1 day, 18:40:00 |     2     0     1  66.7 |
+|    LUNA/BUSD |     14 |           1.28 |          17.90 |           104.647 |          10.46 |         21:47:00 |     5     0     9  35.7 |
+|     LTC/BUSD |     10 |           3.75 |          37.54 |           102.257 |          10.23 |  1 day, 21:06:00 |     5     0     5  50.0 |
+|  BADGER/BUSD |      2 |           3.97 |           7.95 |            96.815 |           9.68 |         19:00:00 |     1     0     1  50.0 |
+|     XMR/BUSD |     17 |           0.79 |          13.46 |            80.848 |           8.08 |         23:32:00 |     6     0    11  35.3 |
+|     RSR/BUSD |      5 |           1.89 |           9.45 |            77.042 |           7.70 |         22:24:00 |     1     0     4  20.0 |
+|   OCEAN/BUSD |      9 |          -0.39 |          -3.50 |            70.527 |           7.05 |         20:07:00 |     2     0     7  22.2 |
+|    BZRX/BUSD |      9 |           4.64 |          41.78 |            67.067 |           6.71 |         21:27:00 |     4     0     5  44.4 |
+|     BTT/BUSD |     12 |           0.87 |          10.42 |            62.883 |           6.29 |         16:25:00 |     3     0     9  25.0 |
+|    CTSI/BUSD |     17 |           1.07 |          18.23 |            59.878 |           5.99 |         17:42:00 |     5     0    12  29.4 |
+|     BTC/BUSD |     16 |           1.16 |          18.55 |            56.561 |           5.66 |   1 day, 2:41:00 |     6     0    10  37.5 |
+|     BCH/BUSD |     10 |           0.98 |           9.84 |            49.516 |           4.95 |         19:36:00 |     4     0     6  40.0 |
+|     FOR/BUSD |      3 |           2.80 |           8.39 |            45.130 |           4.51 |   1 day, 9:00:00 |     2     0     1  66.7 |
+|     FIO/BUSD |      5 |           0.94 |           4.70 |            38.756 |           3.88 |         17:00:00 |     2     0     3  40.0 |
+|     ADA/BUSD |     18 |           0.32 |           5.73 |            30.629 |           3.06 |   1 day, 4:30:00 |     6     0    12  33.3 |
+|     ONE/BUSD |      3 |           0.39 |           1.17 |            25.367 |           2.54 |         12:40:00 |     1     0     2  33.3 |
+|     FIL/BUSD |      6 |           1.65 |           9.90 |            21.153 |           2.12 |         22:20:00 |     1     0     5  16.7 |
+|    YFII/BUSD |      4 |           2.47 |           9.88 |            20.615 |           2.06 |         19:15:00 |     2     0     2  50.0 |
+|   ALPHA/BUSD |      8 |           2.45 |          19.61 |            20.092 |           2.01 |         22:15:00 |     4     0     4  50.0 |
+|   STRAX/BUSD |      3 |           2.59 |           7.78 |            19.898 |           1.99 |         15:40:00 |     1     0     2  33.3 |
+|   AERGO/BUSD |     12 |          -0.24 |          -2.83 |            16.625 |           1.66 |         19:05:00 |     3     0     9  25.0 |
+|     XRP/BUSD |      3 |           1.27 |           3.81 |            15.700 |           1.57 |   1 day, 0:00:00 |     1     0     2  33.3 |
+|     CRV/BUSD |      7 |           2.08 |          14.59 |            15.601 |           1.56 |         17:43:00 |     3     0     4  42.9 |
+|   FORTH/BUSD |      3 |           0.73 |           2.20 |            13.412 |           1.34 |         21:20:00 |     1     0     2  33.3 |
+|     ZRX/BUSD |      6 |          -0.85 |          -5.08 |            13.069 |           1.31 |         18:30:00 |     2     0     4  33.3 |
+|     MKR/BUSD |     10 |          -1.59 |         -15.88 |             3.894 |           0.39 |         14:30:00 |     1     0     9  10.0 |
+|      OM/BUSD |      1 |           0.29 |           0.29 |             2.944 |           0.29 |   1 day, 0:00:00 |     1     0     0   100 |
+|     ATM/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+| AUCTION/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    BOND/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|  BURGER/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     CHR/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    COTI/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    DEGO/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     DNT/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    DOCK/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     EPS/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     ERN/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     FTM/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     GTC/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     HOT/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     ICP/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    KAVA/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    KEEP/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    KLAY/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    MASK/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     MLN/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|      NU/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    POLS/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    POND/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     RLC/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|      SC/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     SFP/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    STMX/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|   SUPER/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|   THETA/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     TKO/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     TLM/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    TORN/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     TVK/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     TWT/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     UTK/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     WIN/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|     ZEN/BUSD |      0 |           0.00 |           0.00 |             0.000 |           0.00 |             0:00 |     0     0     0     0 |
+|    SHIB/BUSD |      1 |          -0.09 |          -0.09 |            -0.499 |          -0.05 |         14:00:00 |     0     0     1     0 |
+|    USDC/BUSD |      1 |          -0.21 |          -0.21 |            -2.321 |          -0.23 |          1:00:00 |     0     0     1     0 |
+|     FXS/BUSD |      1 |          -0.43 |          -0.43 |            -4.037 |          -0.40 |   1 day, 9:00:00 |     0     0     1     0 |
+|     FTT/BUSD |      2 |          -0.37 |          -0.74 |            -4.647 |          -0.46 |         15:00:00 |     1     0     1  50.0 |
+|     XVG/BUSD |      1 |          -0.47 |          -0.47 |            -5.880 |          -0.59 |   1 day, 5:00:00 |     0     0     1     0 |
+|    TOMO/BUSD |     23 |          -0.24 |          -5.46 |            -6.848 |          -0.68 |         18:50:00 |     8     0    15  34.8 |
+|     XLM/BUSD |      4 |          -0.50 |          -2.01 |            -7.430 |          -0.74 |         21:45:00 |     2     0     2  50.0 |
+|     TRX/BUSD |      8 |          -0.25 |          -2.02 |            -7.967 |          -0.80 |         13:15:00 |     1     0     7  12.5 |
+|    IOTX/BUSD |      1 |          -1.47 |          -1.47 |            -8.409 |          -0.84 |          5:00:00 |     0     0     1     0 |
+|     BAR/BUSD |      3 |          -0.37 |          -1.10 |           -10.261 |          -1.03 |         11:40:00 |     1     0     2  33.3 |
+|     XEM/BUSD |      1 |          -1.75 |          -1.75 |           -10.953 |          -1.10 |          1:00:00 |     0     0     1     0 |
+|     CFX/BUSD |      1 |          -1.13 |          -1.13 |           -12.284 |          -1.23 |          1:00:00 |     0     0     1     0 |
+|     ATA/BUSD |      1 |          -1.56 |          -1.56 |           -13.114 |          -1.31 |         11:00:00 |     0     0     1     0 |
+|    TUSD/BUSD |      9 |          -0.21 |          -1.85 |           -15.983 |          -1.60 |          2:53:00 |     0     0     9     0 |
+|     UNI/BUSD |      6 |          -0.30 |          -1.79 |           -19.250 |          -1.92 |         17:50:00 |     1     0     5  16.7 |
+|     PAX/BUSD |      9 |          -0.21 |          -1.91 |           -19.791 |          -1.98 |          1:20:00 |     0     0     9     0 |
+|     MDX/BUSD |      1 |          -3.04 |          -3.04 |           -20.702 |          -2.07 |         13:00:00 |     0     0     1     0 |
+|    CELR/BUSD |      1 |          -2.59 |          -2.59 |           -20.786 |          -2.08 |         19:00:00 |     0     0     1     0 |
+|     XTZ/BUSD |      1 |          -5.03 |          -5.03 |           -20.819 |          -2.08 |          2:00:00 |     0     0     1     0 |
+|     JST/BUSD |      4 |          -1.24 |          -4.97 |           -20.893 |          -2.09 |         12:30:00 |     0     0     4     0 |
+|    DASH/BUSD |      8 |          -0.43 |          -3.43 |           -23.263 |          -2.33 |         21:00:00 |     2     0     6  25.0 |
+|    EGLD/BUSD |      9 |           2.48 |          22.33 |           -24.332 |          -2.43 |         21:20:00 |     1     0     8  11.1 |
+|     VET/BUSD |      7 |          -1.54 |         -10.76 |           -26.740 |          -2.67 |          9:43:00 |     2     0     5  28.6 |
+|    SAND/BUSD |      3 |          -2.38 |          -7.13 |           -29.498 |          -2.95 |         18:20:00 |     0     0     3     0 |
+|     SNX/BUSD |      9 |           0.55 |           4.93 |           -30.985 |          -3.10 |   1 day, 3:20:00 |     4     0     5  44.4 |
+|     XVS/BUSD |      9 |          -1.77 |         -15.91 |           -34.515 |          -3.45 |         11:27:00 |     2     0     7  22.2 |
+|    LINA/BUSD |      1 |          -5.79 |          -5.79 |           -35.732 |          -3.57 |         16:00:00 |     0     0     1     0 |
+|     HNT/BUSD |      2 |          -2.80 |          -5.59 |           -36.574 |          -3.66 |          2:00:00 |     0     0     2     0 |
+|     ANT/BUSD |      9 |          -1.19 |         -10.75 |           -36.855 |          -3.69 |         13:00:00 |     1     0     8  11.1 |
+|    ROSE/BUSD |      3 |           1.89 |           5.66 |           -39.396 |          -3.94 |         13:20:00 |     1     0     2  33.3 |
+|    DEXE/BUSD |      2 |          -2.96 |          -5.92 |           -42.823 |          -4.28 |         13:30:00 |     0     0     2     0 |
+|     BNT/BUSD |     15 |           0.98 |          14.66 |           -43.531 |          -4.35 |         21:40:00 |     5     0    10  33.3 |
+|    KP3R/BUSD |      3 |          -3.84 |         -11.53 |           -46.039 |          -4.60 |         22:20:00 |     1     0     2  33.3 |
+|     LRC/BUSD |      9 |          -1.66 |         -14.94 |           -49.785 |          -4.98 |         19:33:00 |     1     0     8  11.1 |
+|     INJ/BUSD |      9 |           0.11 |           1.00 |           -50.444 |          -5.04 |   1 day, 3:20:00 |     3     0     6  33.3 |
+|     NEO/BUSD |     13 |          -1.55 |         -20.16 |           -51.435 |          -5.14 |         19:18:00 |     4     0     9  30.8 |
+|    IOST/BUSD |      1 |          -5.74 |          -5.74 |           -53.526 |          -5.35 |          1:00:00 |     0     0     1     0 |
+|    UNFI/BUSD |      4 |          -2.30 |          -9.19 |           -56.994 |          -5.70 |         11:15:00 |     1     0     3  25.0 |
+|     FIS/BUSD |      2 |          -3.42 |          -6.84 |           -59.761 |          -5.98 |          5:00:00 |     0     0     2     0 |
+|    VIDT/BUSD |      6 |          -0.66 |          -3.95 |           -60.026 |          -6.00 |         17:30:00 |     1     0     5  16.7 |
+|    WING/BUSD |      7 |           1.13 |           7.91 |           -61.464 |          -6.15 |         15:00:00 |     2     0     5  28.6 |
+|    DATA/BUSD |     16 |          -0.45 |          -7.21 |           -63.269 |          -6.33 |         18:30:00 |     5     0    11  31.2 |
+|     DOT/BUSD |      8 |          -1.06 |          -8.48 |           -63.319 |          -6.33 |         17:30:00 |     1     0     7  12.5 |
+|     RVN/BUSD |      7 |          -1.27 |          -8.90 |           -63.344 |          -6.33 |         20:26:00 |     1     0     6  14.3 |
+|    RAMP/BUSD |      1 |          -5.92 |          -5.92 |           -64.081 |          -6.41 |   1 day, 0:00:00 |     0     0     1     0 |
+|    AAVE/BUSD |      7 |          -1.53 |         -10.71 |           -64.481 |          -6.45 |         13:43:00 |     1     0     6  14.3 |
+|     SRM/BUSD |      3 |          -5.14 |         -15.42 |           -66.478 |          -6.65 |          7:00:00 |     0     0     3     0 |
+|     SKL/BUSD |      3 |          -3.20 |          -9.59 |           -67.502 |          -6.75 |          4:20:00 |     0     0     3     0 |
+|     LIT/BUSD |      4 |          -2.15 |          -8.60 |           -68.300 |          -6.83 |          8:30:00 |     0     0     4     0 |
+|     PHA/BUSD |      3 |          -2.41 |          -7.23 |           -69.283 |          -6.93 |         14:00:00 |     0     0     3     0 |
+|    IOTA/BUSD |      4 |          -1.96 |          -7.85 |           -69.777 |          -6.98 |         18:15:00 |     0     0     4     0 |
+|     LPT/BUSD |      1 |          -7.77 |          -7.77 |           -70.854 |          -7.09 |          2:00:00 |     0     0     1     0 |
+|    DODO/BUSD |      3 |          -2.13 |          -6.38 |           -73.344 |          -7.33 |         17:00:00 |     1     0     2  33.3 |
+|    CAKE/BUSD |     12 |           1.31 |          15.73 |           -74.127 |          -7.41 |   1 day, 3:00:00 |     5     0     7  41.7 |
+|     ICX/BUSD |     16 |          -0.54 |          -8.69 |           -75.386 |          -7.54 |         15:22:00 |     6     0    10  37.5 |
+|     NMR/BUSD |      4 |          -2.05 |          -8.22 |           -76.277 |          -7.63 |         16:15:00 |     1     0     3  25.0 |
+|    BIFI/BUSD |      3 |          -2.47 |          -7.41 |           -77.263 |          -7.73 |          5:20:00 |     0     0     3     0 |
+|    SWRV/BUSD |      4 |          -3.25 |         -13.01 |           -81.190 |          -8.12 |         17:00:00 |     1     0     3  25.0 |
+|     BAT/BUSD |     14 |          -1.00 |         -14.04 |           -83.400 |          -8.34 |         14:26:00 |     3     0    11  21.4 |
+|     GRT/BUSD |      1 |          -4.48 |          -4.48 |           -85.434 |          -8.54 |          6:00:00 |     0     0     1     0 |
+|     KNC/BUSD |     10 |          -2.38 |         -23.80 |           -88.071 |          -8.81 |         10:42:00 |     1     0     9  10.0 |
+|    AUTO/BUSD |      4 |          -2.11 |          -8.45 |           -90.510 |          -9.05 |         10:15:00 |     1     0     3  25.0 |
+|    PROM/BUSD |      2 |          -3.68 |          -7.36 |           -93.113 |          -9.31 |         13:00:00 |     0     0     2     0 |
+|     CHZ/BUSD |      2 |          -4.70 |          -9.40 |           -95.570 |          -9.56 |         12:30:00 |     0     0     2     0 |
+|     AUD/BUSD |     46 |          -0.31 |         -14.47 |          -100.045 |         -10.00 |         11:12:00 |     3     0    43   6.5 |
+|     GBP/BUSD |     38 |          -0.35 |         -13.11 |          -103.225 |         -10.32 |         11:58:00 |     2     0    36   5.3 |
+|     CKB/BUSD |      2 |          -6.77 |         -13.54 |          -108.523 |         -10.85 |         20:30:00 |     0     0     2     0 |
+|     FLM/BUSD |      5 |          -3.54 |         -17.68 |          -111.180 |         -11.12 |         13:36:00 |     2     0     3  40.0 |
+|     DIA/BUSD |      7 |          -3.13 |         -21.94 |          -115.634 |         -11.56 |         12:09:00 |     1     0     6  14.3 |
+|    HARD/BUSD |      5 |          -4.09 |         -20.45 |          -122.196 |         -12.22 |         13:24:00 |     1     0     4  20.0 |
+|     EOS/BUSD |      5 |          -2.06 |         -10.28 |          -128.623 |         -12.86 |          8:36:00 |     1     0     4  20.0 |
+|   SUSHI/BUSD |      2 |          -3.66 |          -7.31 |          -128.884 |         -12.89 |         10:30:00 |     0     0     2     0 |
+|     BAL/BUSD |     13 |          -1.06 |         -13.82 |          -130.138 |         -13.01 |         14:42:00 |     3     0    10  23.1 |
+|     TRB/BUSD |      4 |          -3.18 |         -12.71 |          -131.678 |         -13.17 |         13:00:00 |     0     0     4     0 |
+|     ACM/BUSD |      2 |          -4.68 |          -9.37 |          -132.287 |         -13.23 |          2:00:00 |     0     0     2     0 |
+|     ENJ/BUSD |     10 |          -1.16 |         -11.63 |          -133.336 |         -13.33 |         14:30:00 |     2     0     8  20.0 |
+|    REEF/BUSD |      2 |          -5.24 |         -10.48 |          -135.280 |         -13.53 |          2:00:00 |     0     0     2     0 |
+|     EUR/BUSD |     31 |          -0.39 |         -11.95 |          -139.052 |         -13.91 |         14:29:00 |     5     0    26  16.1 |
+|   1INCH/BUSD |      5 |          -2.71 |         -13.56 |          -140.748 |         -14.07 |         17:00:00 |     1     0     4  20.0 |
+|    QTUM/BUSD |      8 |          -2.06 |         -16.51 |          -142.821 |         -14.28 |         11:08:00 |     1     0     7  12.5 |
+|   WAVES/BUSD |     17 |           1.60 |          27.24 |          -143.431 |         -14.34 |   1 day, 4:14:00 |     7     0    10  41.2 |
+|    GHST/BUSD |      7 |          -2.74 |         -19.18 |          -143.951 |         -14.40 |         12:26:00 |     0     0     7     0 |
+|    NANO/BUSD |      6 |          -2.61 |         -15.67 |          -144.698 |         -14.47 |          5:00:00 |     0     0     6     0 |
+|     MIR/BUSD |      4 |          -3.59 |         -14.36 |          -145.328 |         -14.53 |         10:45:00 |     0     0     4     0 |
+|     UFT/BUSD |      2 |          -4.82 |          -9.63 |          -147.128 |         -14.71 |          4:30:00 |     0     0     2     0 |
+|     TRU/BUSD |      4 |          -2.62 |         -10.48 |          -149.617 |         -14.96 |          4:00:00 |     0     0     4     0 |
+|    HBAR/BUSD |      9 |          -2.55 |         -22.94 |          -158.961 |         -15.90 |         12:00:00 |     0     0     9     0 |
+|     CVP/BUSD |      8 |          -3.34 |         -26.74 |          -164.472 |         -16.45 |          5:08:00 |     2     0     6  25.0 |
+|    BAND/BUSD |      5 |          -3.22 |         -16.09 |          -165.542 |         -16.55 |         12:36:00 |     0     0     5     0 |
+|   FRONT/BUSD |      6 |          -3.95 |         -23.70 |          -168.348 |         -16.83 |         19:30:00 |     0     0     6     0 |
+|      IQ/BUSD |     14 |          -2.26 |         -31.61 |          -174.702 |         -17.47 |         12:34:00 |     2     0    12  14.3 |
+|     SYS/BUSD |      7 |          -2.00 |         -14.01 |          -179.989 |         -18.00 |         15:51:00 |     2     0     5  28.6 |
+|     AXS/BUSD |      7 |          -2.84 |         -19.85 |          -181.854 |         -18.19 |         20:26:00 |     2     0     5  28.6 |
+|    IDEX/BUSD |      5 |          -5.21 |         -26.07 |          -186.681 |         -18.67 |         11:00:00 |     0     0     5     0 |
+|    RUNE/BUSD |     13 |          -0.87 |         -11.33 |          -187.005 |         -18.70 |         15:23:00 |     3     0    10  23.1 |
+|     CTK/BUSD |      4 |          -5.67 |         -22.69 |          -213.766 |         -21.38 |          7:30:00 |     0     0     4     0 |
+|     AVA/BUSD |     17 |          -0.78 |         -13.31 |          -220.603 |         -22.06 |         14:49:00 |     3     0    14  17.6 |
+|     ONT/BUSD |     11 |          -3.46 |         -38.11 |          -239.169 |         -23.92 |          9:49:00 |     0     0    11     0 |
+|     ETC/BUSD |      7 |          -2.70 |         -18.87 |          -253.654 |         -25.37 |         13:51:00 |     2     0     5  28.6 |
+|     SLP/BUSD |      1 |         -20.16 |         -20.16 |          -259.338 |         -25.93 |          1:00:00 |     0     0     1     0 |
+|     JUV/BUSD |      8 |          -2.45 |         -19.62 |          -285.666 |         -28.57 |          7:38:00 |     1     0     7  12.5 |
+|     KSM/BUSD |     13 |          -2.57 |         -33.42 |          -300.930 |         -30.09 |         15:42:00 |     2     0    11  15.4 |
+|      AR/BUSD |      4 |          -8.34 |         -33.36 |          -305.638 |         -30.56 |         17:45:00 |     0     0     4     0 |
+|      DF/BUSD |      8 |          -4.09 |         -32.74 |          -316.226 |         -31.62 |          7:52:00 |     1     0     7  12.5 |
+|     DGB/BUSD |     18 |          -3.08 |         -55.40 |          -340.407 |         -34.04 |          7:57:00 |     1     0    17   5.6 |
+|    BAKE/BUSD |      4 |          -5.67 |         -22.67 |          -347.265 |         -34.73 |          5:15:00 |     0     0     4     0 |
+|    ALGO/BUSD |     16 |          -2.75 |         -43.94 |          -395.570 |         -39.56 |         14:08:00 |     2     0    14  12.5 |
+|        TOTAL |   1205 |           0.30 |         361.49 |           649.942 |          64.99 |         18:18:00 |   291     0   914  24.1 |
+===================================================== SELL REASON STATS =====================================================
+|   Sell Reason |   Sells |   Win  Draws  Loss  Win% |   Avg Profit % |   Cum Profit % |   Tot Profit BUSD |   Tot Profit % |
+|---------------+---------+--------------------------+----------------+----------------+-------------------+----------------|
+|   sell_signal |    1201 |    291     0   910  24.2 |           0.37 |         442.13 |          1270.79  |         147.38 |
+|     stop_loss |       4 |      0     0     4     0 |         -20.16 |         -80.64 |          -620.843 |         -26.88 |
+====================================================== LEFT OPEN TRADES REPORT ======================================================
+|   Pair |   Buys |   Avg Profit % |   Cum Profit % |   Tot Profit BUSD |   Tot Profit % |   Avg Duration |   Win  Draw  Loss  Win% |
+|--------+--------+----------------+----------------+-------------------+----------------+----------------+-------------------------|
+|  TOTAL |      0 |           0.00 |           0.00 |             0.000 |           0.00 |           0:00 |     0     0     0     0 |
+=============== SUMMARY METRICS ================
+| Metric                 | Value               |
+|------------------------+---------------------|
+| Backtesting from       | 2020-06-09 00:00:00 |
+| Backtesting to         | 2021-07-14 05:00:00 |
+| Max open trades        | 3                   |
+|                        |                     |
+| Total/Daily Avg Trades | 1205 / 3.01         |
+| Starting balance       | 1000.000 BUSD       |
+| Final balance          | 1649.942 BUSD       |
+| Absolute profit        | 649.942 BUSD        |
+| Total profit %         | 64.99%              |
+| Avg. stake amount      | 679.510 BUSD        |
+| Total trade volume     | 818809.389 BUSD     |
+|                        |                     |
+| Best Pair              | AUDIO/BUSD 156.33%  |
+| Worst Pair             | DGB/BUSD -55.4%     |
+| Best trade             | MATIC/BUSD 115.33%  |
+| Worst trade            | YFI/BUSD -20.16%    |
+| Best day               | 1586.816 BUSD       |
+| Worst day              | -639.932 BUSD       |
+| Days win/draw/lose     | 147 / 28 / 218      |
+| Avg. Duration Winners  | 1 day, 22:28:00     |
+| Avg. Duration Loser    | 9:19:00             |
+| Rejected Buy signals   | 710287              |
+|                        |                     |
+| Min balance            | 709.208 BUSD        |
+| Max balance            | 5953.183 BUSD       |
+| Drawdown               | 384.07%             |
+| Drawdown               | 4303.241 BUSD       |
+| Drawdown high          | 4953.183 BUSD       |
+| Drawdown low           | 649.942 BUSD        |
+| Drawdown Start         | 2021-05-16 02:00:00 |
+| Drawdown End           | 2021-07-14 02:00:00 |
+| Market change          | 239.61%             |
+================================================</code></pre><p></p></div><div class="metadata"><div class="date" title="Zettel date"><time datetime="2021-07-14T00:00">2021-07-14</time></div></div></article><nav class="ui attached segment deemphasized backlinksPane" id="neuron-backlinks-pane"><h3 class="ui header"><span title="Backlinks from folgezettel parents">Uplinks</span></h3><ul class="backlinks"><li><span class="zettel-link-container folge"><span class="zettel-link"><a href="notes">notes/</a><span data-nosnippet="" style="user-select: none; color: gray" title="Folgezettel">#</span></span></span><ul class="context-list" style="zoom: 85%;"><li class="item"><div class="pandoc"><em>Parent directory zettel</em></div></li></ul></li></ul></nav><nav class="ui attached segment deemphasized bottomPane" id="neuron-tags-pane"><div><span class="ui basic label zettel-tag" title="Tag">bot/trading-bot</span><span class="ui basic label zettel-tag" title="Tag">root/notes</span></div></nav><nav class="ui bottom attached icon compact inverted menu black" id="neuron-nav-bar"><!--replace-start-9--><a class="item" href="." title="Home"><i class="home icon"></i></a><!--replace-end-9--><a class="item" href="https://github.com/ilumin/notes/edit/master/./notes/freqtrade-01.md" title="Edit this page"><i class="edit icon"></i></a><a class="right item" href="impulse" title="Open Impulse"><i class="wave square icon"></i></a></nav></div></div><!--replace-end-6--><!--replace-end-3--><!--replace-end-2--><div class="ui center aligned container footer-version"><div class="ui tiny image"><a href="https://neuron.zettel.page"><img alt="logo" src="https://raw.githubusercontent.com/srid/neuron/master/assets/neuron.svg" title="Generated by Neuron 1.9.33.0" /></a></div></div></div></body></html>
