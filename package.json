@@ -9,6 +9,9 @@
   "private": true,
   "scripts": {
     "start": "neuron gen -wS",
-    "new:note": "neuron new"
+    "new:note": "nodetouch notes/$(openssl rand -hex 4).md"
+  },
+  "devDependencies": {
+    "touch": "^3.1.0"
   }
 }
